@@ -1,0 +1,27 @@
+openapi: 3.0.2
+
+info:
+  version: 1.0.0-impl:etsi.org:ETSI_NFV_OpenAPI:1
+
+  title: SOL011 - API version interface
+
+  description: >
+    SOL011 - API version Interface
+
+    IMPORTANT: Please note that this file might
+    be not aligned to the current version of the ETSI Group Specification it
+    refers to and has not been approved by the ETSI NFV ISG. In case of
+    discrepancies the published ETSI Group Specification takes precedence.
+    Please report bugs to
+    https://forge.etsi.org/bugzilla/buglist.cgi?component=Nfv-Openapis
+
+  license:
+    name: ETSI Forge copyright notice
+    url: https://forge.etsi.org/etsi-forge-copyright-notice.txt
+
+  contact:
+    name: NFV-SOL WG
+
+externalDocs:
+  description: ETSI GS NFV-SOL 011 V0.1.0
+  url: https://docbox.etsi.org/ISG/NFV/Open/Drafts/SOL011ed331_Or-Or_Stage_3/NFV-SOL011ed331v010.zip
