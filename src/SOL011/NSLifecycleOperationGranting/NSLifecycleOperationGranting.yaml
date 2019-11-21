@@ -1,0 +1,165 @@
+openapi: 3.0.2
+info:
+  version: 1.0.0-impl:etsi.org:ETSI_NFV_OpenAPI:1
+  title: SOL011 - NS Lifecycle Operation Granting Interface
+  description: >
+    SOL009 - NS Lifecycle Operation Granting Interface
+
+    IMPORTANT: Please note that this file might be not aligned to the current version of the ETSI Group Specification
+     it refers to. In case of discrepancies the published ETSI Group Specification takes precedence.
+
+    Please report bugs to https://forge.etsi.org/bugzilla/buglist.cgi?component=Nfv-Openapis&list_id=61&product=NFV&resolution=
+  license:
+    name: ETSI Forge copyright notice
+    url: https://forge.etsi.org/etsi-forge-copyright-notice.txt
+externalDocs:
+  description: ETSI GS NFV-SOL 011 V3.3.1
+  url: https://docbox.etsi.org/ISG/NFV/Open/Drafts/SOL011ed331_Or-Or_Stage_3/NFV-SOL011ed331v010.zip
+
+security:
+  - OauthSecurity:
+      - all
+servers:
+  - url: http://127.0.0.1/nslcog/v1
+  - url: https://127.0.0.1/nslcog/v1
+
+paths:
+  "/api_versions":
+    $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
+
+  "/grant":
+    description: >-
+      This resource represents grant. The NFVO-N can use this resource to request a grant.
+    post:
+      description: >-
+        The POST method requests a grant for a particular NS lifecycle operation.
+        This method shall follow the provisions specified in the tables 7.5.3.3.1-1 and 7.5.3.3.1-2
+        for URI query parameters, request and response data structures, and response codes.
+      parameters:
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/Version"
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/Accept"
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/ContentType"
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/Authorization"
+      requestBody:
+        $ref: "#/components/requestBodies/GrantNsLifecycleOperationRequest"
+      responses:
+        "204":
+          $ref: '#/components/responses/Grant.Post.204'
+        "400":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/400
+        "401":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/401
+        "403":
+          $ref: '#/components/responses/Grant.Post.403'
+        "404":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/404
+        "405":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/405
+        "406":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/406
+        "422":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/422
+        "500":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/500
+        "503":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/503
+        "504":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/504
+
+components:
+  requestBodies:
+    GrantNsLifecycleOperationRequest:
+      description: >-
+        The NS lifecycle operation grant request parameters, as defined in clause 7.6.x.a.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/GrantNsLifecycleOperationRequest"
+  responses:
+    Grant.Post.204:
+      description: >-
+        Shall be returned when the grant request was approved.
+        The response body shall be empty.
+      headers:
+        WWW-Authenticate:
+          description: >
+            Challenge if the corresponding HTTP request has not provided
+            authorization, or error details if the corresponding HTTP
+            request has provided an invalid authorization token.
+          schema:
+            type: string
+        Version:
+          description: >
+            Version of the API used in the response.
+          schema:
+            type: string
+
+    Grant.Post.403:
+      description: >-
+        Shall be returned upon the following error: the grant request was rejected.
+        A ProblemDetails structure shall be included in the response to provide more
+        details about the rejection in the "details" attribute.
+      headers:
+        Content-Type:
+          description: The MIME type of the body of the response.
+          schema:
+            type: string
+        WWW-Authenticate:
+          description: >
+            Challenge if the corresponding HTTP request has not provided
+            authorization, or error details if the corresponding HTTP
+            request has provided an invalid authorization token.
+          schema:
+            type: string
+        Version:
+          description: >
+            Version of the API used in the response.
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: '../components/SOL011_schemas.yaml#/components/schemas/ProblemDetails'
+  schemas:
+    GrantNsLifecycleOperationRequest:
+      description: >-
+        This type represents request parameters for the "grant NS lifecycle" operation.
+        It shall comply with the provisions defined in table 7.6.2.2-1.
+      type: object
+      required:
+        - nsInstanceId
+        - nsdId
+        - lifecycleOperation
+      properties:
+        nsInstanceId:
+          description: >-
+            Identifier of the NS instance which this grant request relates to.
+            Each NFVO-N instance manages its own namespace for NS instance identifiers.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
+        nsdId:
+          description: >-
+            Identifier of the NSD that defines the NS for which the lifecycle management operation is to be granted.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
+        lifecycleOperation:
+          description: >-
+            Type of the lifecycle management operation for which the granting is requested.
+            The NS LCM operations InstantiateNS, CreateNsIdentifier, DeleteNsIdentifier and
+            QueryNs can be executed by NFVO-N without requesting granting.
+          $ref: "#/components/schemas/NsLcmOperation"
+        additionalParams:
+          description: >-
+            Additional parameters passed by NFVO-N, specific to the NS and the lifecycle management operation.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/KeyValuePairs"
+
+    NsLcmOperation:
+      description: >-
+        The enumeration NsLcmOperation shall comply with the provisions defined in table 7.6.4.3-1.
+        It indicates the type of the NS lifecycle management operation for which the granting is requested.
+      type: string
+      enum:
+        - SCALE
+        - TERMINATE
+        - HEAL
+
+
+
