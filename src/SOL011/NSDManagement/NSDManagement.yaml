@@ -159,8 +159,10 @@ components:
             minimum: 0
       content:
         application/json:
-        schema:
-          $ref: "#/components/schemas/NsdInfos.Get.Response"
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/NsdInfo"
 
     NsdInfo.Get.200:
       description: >-
@@ -200,17 +202,10 @@ components:
             minimum: 0
       content:
         application/json:
-        schema:
-          $ref: "#/components/schemas/NsdInfo"
+          schema:
+            $ref: "#/components/schemas/NsdInfo"
 
   schemas:
-    NsdInfos.Get.Response:
-      description: >
-        This type represents a response for the query NSD operation.
-      type: array
-      items:
-        $ref: "#/components/schemas/NsdInfo"
-
     NsdInfo:
       description: >
         This type represents a response for the query NSD operation.
