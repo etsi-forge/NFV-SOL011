@@ -215,20 +215,14 @@ components:
       description: >
         This type represents a response for the query NSD operation.
       type: object
-      oneOf:
-        - required:
-          - id
-          - nsdOnboardingState
-          - nsdOperationalState
-          - nsdUsageState
-          - _links
-          - vnfPkgId
-        - required:
-          - id
-          - nsdOnboardingState
-          - nsdOperationalState
-          - nsdUsageState
-          - _links
+      required:
+        - id
+        - nsdOnboardingState
+        - nsdOperationalState
+        - nsdUsageState
+        - _links
+        - oneOf:
+          - vnfPkgIds
           - nestedNsdInfoId
       properties:
         id:
