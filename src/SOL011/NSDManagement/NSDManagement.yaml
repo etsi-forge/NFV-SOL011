@@ -223,7 +223,7 @@ components:
         - _links
         - oneOf:
           - vnfPkgIds
-          - nestedNsdInfoId
+          - nestedNsdInfoIds
       properties:
         id:
           description: >
