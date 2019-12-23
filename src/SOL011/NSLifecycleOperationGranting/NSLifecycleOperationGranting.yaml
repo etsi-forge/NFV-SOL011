@@ -14,7 +14,7 @@ info:
     url: https://forge.etsi.org/etsi-forge-copyright-notice.txt
 externalDocs:
   description: ETSI GS NFV-SOL 011 V3.3.1
-  url: https://docbox.etsi.org/ISG/NFV/Open/Drafts/SOL011ed331_Or-Or_Stage_3/NFV-SOL011ed331v010.zip
+  url: https://docbox.etsi.org/ISG/NFV/Open/Drafts/SOL011ed331_Or-Or_Stage_3/NFV-SOL011ed331v020.zip
 
 security:
   - OauthSecurity:
@@ -27,7 +27,7 @@ paths:
   "/api_versions":
     $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
 
-  "/grant":
+  "/grants":
     description: >-
       This resource represents grant. The NFVO-N can use this resource to request a grant.
     post:
@@ -43,14 +43,14 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/GrantNsLifecycleOperationRequest"
       responses:
-        "204":
-          $ref: '#/components/responses/Grant.Post.204'
+        "201":
+          $ref: '#/components/responses/Grants.Post.201'
         "400":
           $ref: ../components/SOL011_resp.yaml#/components/responses/400
         "401":
           $ref: ../components/SOL011_resp.yaml#/components/responses/401
         "403":
-          $ref: '#/components/responses/Grant.Post.403'
+          $ref: '#/components/responses/Grants.Post.403'
         "404":
           $ref: ../components/SOL011_resp.yaml#/components/responses/404
         "405":
@@ -66,20 +66,70 @@ paths:
         "504":
           $ref: ../components/SOL011_resp.yaml#/components/responses/504
 
+  "/grants/{grantId}":
+    description: >-
+      This resource represents an individual grant..
+    get:
+      description: >-
+        The GET method reads a grant.
+        This method shall follow the provisions specified in the tables 7.5.4.3.2-1 and 7.5.4.3.2-2
+        for URI query parameters, request and response data structures, and response codes.
+      parameters:
+        - $ref: "#/components/parameters/grantId"
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/Version"
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/Accept"
+        - $ref: "../components/SOL011_params.yaml#/components/parameters/Authorization"
+      responses:
+        "200":
+          $ref: '#/components/responses/Grant.Get.200'
+        "400":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/400
+        "401":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/401
+        "403":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/403
+        "404":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/404
+        "405":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/405
+        "406":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/406
+        "422":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/422
+        "500":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/500
+        "503":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/503
+        "504":
+          $ref: ../components/SOL011_resp.yaml#/components/responses/504
+
+
 components:
+  parameters:
+    grantId:
+      name: grantId
+      in: path
+      description: >-
+        Identifier of the grant
+      required: true
+      schema:
+        $ref: '../components/SOL011_schemas.yaml#/components/schemas/Identifier'
   requestBodies:
     GrantNsLifecycleOperationRequest:
       description: >-
-        The NS lifecycle operation grant request parameters, as defined in clause 7.6.x.a.
+        The NS lifecycle operation grant request parameters, as defined in clause 7.6.2.2.
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/GrantNsLifecycleOperationRequest"
   responses:
-    Grant.Post.204:
+    Grants.Post.201:
       description: >-
-        Shall be returned when the grant request was approved.
-        The response body shall be empty.
+        Shall be returned when the grant has been created successfully.
+        A representation of the created "Individual grant" resource shall be returned in the response body.
+        The HTTP response shall include a "Location" HTTP header that indicates the URI of the
+        "Individual grant" resource just created.
+
       headers:
         WWW-Authenticate:
           description: >
@@ -93,8 +143,17 @@ components:
             Version of the API used in the response.
           schema:
             type: string
+        Location:
+          description: >
+            URI of the "Individual grant" resource just created
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Grant'
 
-    Grant.Post.403:
+    Grants.Post.403:
       description: >-
         Shall be returned upon the following error: the grant request was rejected.
         A ProblemDetails structure shall be included in the response to provide more
@@ -120,6 +179,29 @@ components:
         application/json:
           schema:
             $ref: '../components/SOL011_schemas.yaml#/components/schemas/ProblemDetails'
+
+    Grant.Get.200:
+      description: >-
+        Shall be returned when the grant has been read successfully.
+        A representation of the "Individual grant" resource shall be returned in the response body.
+      headers:
+        WWW-Authenticate:
+          description: >
+            Challenge if the corresponding HTTP request has not provided
+            authorization, or error details if the corresponding HTTP
+            request has provided an invalid authorization token.
+          schema:
+            type: string
+        Version:
+          description: >
+            Version of the API used in the response.
+          schema:
+            type: string
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Grant'
+
   schemas:
     GrantNsLifecycleOperationRequest:
       description: >-
@@ -161,5 +243,50 @@ components:
         - TERMINATE
         - HEAL
 
+    Grant:
+      description: >-
 
-
+      type: object
+      required:
+        - id
+        - nsInstanceId
+        - nsLcmOpOccId
+        - _links
+      properties:
+        id:
+          description: >-
+            Identifier of the grant.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
+        nsInstanceId:
+          description: >-
+            Identifier of the NS instance which this grant request relates to.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
+        nsLcmOpOccId:
+          description: >-
+            Identifier of the NS lifecycle management operation occurrence associated to the GrantRequest.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
+        additionalParams:
+          description: >-
+            Additional parameters passed by NFVO-N, specific to the NS and the lifecycle management operation.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/KeyValuePairs"
+        _links:
+          description: >-
+            Links to resources related to this resource.
+          type: object
+          required:
+            - self
+            - nsLcmOpOcc
+            - nsInstance
+          properties:
+            self:
+              description: >-
+                URI of this resource
+              $ref: "../components/SOL011_schemas.yaml#/components/schemas/Link"
+            nsLcmOpOcc:
+              description: >-
+                Related NS lifecycle management operation occurrence
+              $ref: "../components/SOL011_schemas.yaml#/components/schemas/Link"
+            nsInstance:
+              description: >-
+                Related NS instance.
+              $ref: "../components/SOL011_schemas.yaml#/components/schemas/Link"
