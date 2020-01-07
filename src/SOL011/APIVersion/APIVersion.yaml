@@ -1,7 +1,7 @@
 openapi: 3.0.2
 
 info:
-  version: 1.1.0-impl:etsi.org:ETSI_NFV_OpenAPI:1
+  version: 1.0.0-impl:etsi.org:ETSI_NFV_OpenAPI:1
 
   title: SOL011 - API version interface
 
@@ -27,5 +27,7 @@ externalDocs:
   url: https://docbox.etsi.org/ISG/NFV/Open/Drafts/SOL011ed331_Or-Or_Stage_3/NFV-SOL011ed331v010.zip
 
 paths:
-  /nfvmanofm/api_versions:
+  /nsdm/api_versions:
+    $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
+  /nslcog/api_versions:
     $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
