@@ -3,7 +3,7 @@ info:
   version: 1.0.0-impl:etsi.org:ETSI_NFV_OpenAPI:1
   title: SOL011 - NS Lifecycle Operation Granting Interface
   description: >
-    SOL009 - NS Lifecycle Operation Granting Interface
+    SOL011 - NS Lifecycle Operation Granting Interface
 
     IMPORTANT: Please note that this file might be not aligned to the current version of the ETSI Group Specification
      it refers to. In case of discrepancies the published ETSI Group Specification takes precedence.
@@ -14,7 +14,7 @@ info:
     url: https://forge.etsi.org/etsi-forge-copyright-notice.txt
 externalDocs:
   description: ETSI GS NFV-SOL 011 V3.3.1
-  url: https://docbox.etsi.org/ISG/NFV/Open/Drafts/SOL011ed331_Or-Or_Stage_3/NFV-SOL011ed331v020.zip
+  url: https://www.etsi.org/deliver/etsi_gs/NFV-SOL/001_099/011/03.03.01_60/gs_NFV-SOL011v030301p.pdf
 
 security:
   - OauthSecurity:
