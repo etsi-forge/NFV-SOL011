@@ -34,8 +34,8 @@ produces:
 
 paths:
   '/URI_is_provided_by_the_client_when_creating_the_subscription-AlarmNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~URI_is_provided_by_the_client_when_creating_the_subscription-AlarmNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmNotification'
   '/URI_is_provided_by_the_client_when_creating_the_subscription-AlarmClearedNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~URI_is_provided_by_the_client_when_creating_the_subscription-AlarmClearedNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmClearedNotification'
   '/URI_is_provided_by_the_client_when_creating_the_subscription-AlarmListRebuiltNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~URI_is_provided_by_the_client_when_creating_the_subscription-AlarmListRebuiltNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmListRebuiltNotification'
