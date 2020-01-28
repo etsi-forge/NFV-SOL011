@@ -104,6 +104,8 @@ paths:
     description: >-
       This resource represents an individual subscription. The client can use this resource to read and to 
       terminate a subscription to notifications related to NS instance usage.
+    parameters:
+      - $ref: "#/components/parameters/subscriptionId"
     get:
       description: >-
         The GET method retrieves information about a subscription by reading an "individual subscription" resource.
@@ -238,7 +240,16 @@ paths:
           $ref: ../components/SOL011_resp.yaml#/components/responses/504
 
 components:
-  
+  parameters:
+    subscriptionId:
+      name: subscriptionId
+      in: path
+      description: >-
+        Identifier of the subscription
+      required: true
+      schema:
+        $ref: '../components/SOL011_schemas.yaml#/components/schemas/Identifier'
+
   requestBodies:
     NsInstanceUsageSubscriptionRequest:
       description: 
