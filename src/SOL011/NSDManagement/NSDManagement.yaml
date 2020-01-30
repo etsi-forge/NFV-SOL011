@@ -76,5 +76,5 @@ paths:
         required: true
         type: string
     get:
-      $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSDManagement/NSDManagement.yaml#/paths/~1ns_descriptors/~1{nsdInfoId}/get'
+      $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSDManagement/NSDManagement.yaml#/paths/~1ns_descriptors~1{nsdInfoId}/get'
 
