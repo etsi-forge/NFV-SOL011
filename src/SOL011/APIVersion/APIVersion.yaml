@@ -27,7 +27,15 @@ externalDocs:
   url: https://www.etsi.org/deliver/etsi_gs/NFV-SOL/001_099/011/03.03.01_60/gs_NFV-SOL011v030301p.pdf
 
 paths:
-  /nsdm/api_versions:
+  /nsd/api_versions:
     $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
   /nslcog/api_versions:
+    $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
+  /nslcm/api_versions:
+    $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
+  /nsiun/api_versions:
+    $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
+  /nspm/api_versions:
+    $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'
+  /nsfm/api_versions:
     $ref: '../endpoints/SOL011_endpoints.yaml#/endpoints/api_versions'

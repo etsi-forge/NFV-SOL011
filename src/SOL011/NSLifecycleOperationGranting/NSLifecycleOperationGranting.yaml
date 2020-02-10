@@ -211,6 +211,7 @@ components:
       required:
         - nsInstanceId
         - nsdId
+        - nsLcmOpOccId
         - lifecycleOperation
       properties:
         nsInstanceId:
@@ -221,6 +222,10 @@ components:
         nsdId:
           description: >-
             Identifier of the NSD that defines the NS for which the lifecycle management operation is to be granted.
+          $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
+        nsLcmOpOccId:
+          description: >-
+            The identifier of the NS lifecycle management operation occurrence associated to the GrantRequest..
           $ref: "../components/SOL011_schemas.yaml#/components/schemas/Identifier"
         lifecycleOperation:
           description: >-
@@ -245,7 +250,7 @@ components:
 
     Grant:
       description: >-
-
+        This type represents a grant. It shall comply with the provisions defined in table 7.6.2.3-1.
       type: object
       required:
         - id

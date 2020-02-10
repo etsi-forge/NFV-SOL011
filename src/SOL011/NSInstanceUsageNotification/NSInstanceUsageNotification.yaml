@@ -146,7 +146,7 @@ paths:
         - $ref: "../components/SOL011_params.yaml#/components/parameters/ContentType"
         - $ref: "../components/SOL011_params.yaml#/components/parameters/Authorization"
       responses:
-        200:
+        204:
           $ref: '#/components/responses/Subscription.Delete.204'
         400:
           $ref: ../components/SOL011_resp.yaml#/components/responses/400

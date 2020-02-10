@@ -20,7 +20,7 @@ externalDocs:
   description: ETSI GS NFV-SOL 011 V3.3.1
   url: https://www.etsi.org/deliver/etsi_gs/NFV-SOL/001_099/011/03.03.01_60/gs_NFV-SOL011v030301p.pdf
 
-basePath: /nslcm/v1
+basePath: /nsd/v1
 
 schemes:
   - http
