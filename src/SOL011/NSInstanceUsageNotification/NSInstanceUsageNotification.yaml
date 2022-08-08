@@ -74,8 +74,8 @@ paths:
         - $ref: "../components/SOL011_params.yaml#/components/parameters/Version"
         - $ref: "../components/SOL011_params.yaml#/components/parameters/Accept"
         - $ref: "../components/SOL011_params.yaml#/components/parameters/Authorization"
-        - $ref: "../components/SOL011_params.yaml#/components/parameters/filter"
-        - $ref: "../components/SOL011_params.yaml#/components/parameters/nextpage_opaque_marker"
+        - $ref: "#/components/parameters/filter.Subscriptions"
+        - $ref: "#/components/parameters/nextpage_opaque_marker.Subscriptions"
       responses:
         201:
           $ref: "#/components/responses/Subscriptions.Get.200"
@@ -249,6 +249,33 @@ components:
       required: true
       schema:
         $ref: '../components/SOL011_schemas.yaml#/components/schemas/Identifier'
+
+    filter.Subscriptions:
+      name: filter
+      description: >
+        Attribute-based filtering expression according to clause 5.2 of ETSI
+        GS NFV-SOL 013 [2].
+        The NFVO-C shall support receiving this parameter as part of the URI query
+        string. The NFVO-N may supply this parameter.
+        All attribute names that appear in the NsInstanceUsageSubscription and in
+        data types referenced from it shall be supported by the NFVO-C in the filter
+        expression.
+      in: query
+      required: false
+      schema:
+        type: string
+
+    nextpage_opaque_marker.Subscriptions:
+      name: nextpage_opaque_marker
+      description: >
+        Marker to obtain the next page of a paged response. Shall be supported by
+        the NFVO-C if the NFVO-C supports alternative 2 (paging) according to
+        clause 5.4.2.1 of ETSI GS NFV-SOL 013 [2] for this resource
+      in: query
+      required: false
+      schema:
+        type: string
+
 
   requestBodies:
     NsInstanceUsageSubscriptionRequest:
