@@ -8,7 +8,7 @@ info:
     IMPORTANT: Please note that this file might be not aligned to the current version of the ETSI Group Specification
      it refers to. In case of discrepancies the published ETSI Group Specification takes precedence.
 
-    Please report bugs to https://forge.etsi.org/bugzilla/buglist.cgi?component=Nfv-Openapis&list_id=61&product=NFV&resolution=
+    Please report bugs to https://forge.etsi.org/rep/nfv/SOL011/-/issues
   license:
     name: ETSI Forge copyright notice
     url: https://forge.etsi.org/etsi-forge-copyright-notice.txt

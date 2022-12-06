@@ -13,7 +13,7 @@ info:
     refers to and has not been approved by the ETSI NFV ISG. In case of
     discrepancies the published ETSI Group Specification takes precedence.
     Please report bugs to
-    https://forge.etsi.org/bugzilla/buglist.cgi?component=Nfv-Openapis
+    https://forge.etsi.org/rep/nfv/SOL011/-/issues
 
   license:
     name: ETSI Forge copyright notice
