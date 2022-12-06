@@ -34,7 +34,7 @@ produces:
 
 paths:
   "/api_versions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1api-versions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1api_versions'
   "/ns_instances":
     $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances'
   "/ns_instances/{nsInstanceId}":

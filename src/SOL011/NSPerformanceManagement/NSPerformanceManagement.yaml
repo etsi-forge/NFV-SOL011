@@ -34,7 +34,7 @@ produces:
 
 paths:
   "/api_versions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1api-versions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1api_versions'
   "/pm_jobs":
     $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1pm_jobs'
   "/pm_jobs/{pmJobId}":
