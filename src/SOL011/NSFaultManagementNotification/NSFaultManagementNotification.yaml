@@ -9,7 +9,7 @@ info:
     version of the ETSI Group Specification it refers to and has not been
     approved by the ETSI NFV ISG. In case of discrepancies the published ETSI
     Group Specification takes precedence.
-    Please report bugs to https://forge.etsi.org/bugzilla/buglist.cgi?component=Nfv-Openapis
+    Please report bugs to https://forge.etsi.org/rep/nfv/SOL011/-/issues
   license:
     name: "ETSI Forge copyright notice"
     url: https://forge.etsi.org/etsi-forge-copyright-notice.txt
@@ -18,7 +18,7 @@ info:
 
 externalDocs:
   description: ETSI GS NFV-SOL 011 V3.3.1
-  url: https://www.etsi.org/deliver/etsi_gs/NFV-SOL/001_099/011/03.03.01_60/gs_NFV-SOL011v030301p.pdf
+  url: https://www.etsi.org/deliver/etsi_gs/NFV-SOL/001_099/011/03.07.01_60/gs_NFV-SOL011v030701p.pdf
 
 basePath: /callback/v1
 
@@ -34,8 +34,8 @@ produces:
 
 paths:
   '/URI_is_provided_by_the_client_when_creating_the_subscription-AlarmNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmNotification'
   '/URI_is_provided_by_the_client_when_creating_the_subscription-AlarmClearedNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmClearedNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmClearedNotification'
   '/URI_is_provided_by_the_client_when_creating_the_subscription-AlarmListRebuiltNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmListRebuiltNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagementNotification/NSFaultManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-AlarmListRebuiltNotification'
