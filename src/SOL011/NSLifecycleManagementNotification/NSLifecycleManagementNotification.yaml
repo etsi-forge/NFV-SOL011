@@ -34,8 +34,8 @@ produces:
 
 paths:
   '/URI_is_provided_by_the_client_when_creating_the_subscription-NsLcmOperationOccurrenceNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagementNotification/NSLifecycleManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-NsLcmOperationOccurrenceNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagementNotification/NSLifecycleManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-NsLcmOperationOccurrenceNotification'
   '/URI_is_provided_by_the_client_when_creating_the_subscription-NsIdentifierCreationNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagementNotification/NSLifecycleManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-NsIdentifierCreationNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagementNotification/NSLifecycleManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-NsIdentifierCreationNotification'
   '/URI_is_provided_by_the_client_when_creating_the_subscription-NsIdentifierDeletionNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagementNotification/NSLifecycleManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-NsIdentifierDeletionNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagementNotification/NSLifecycleManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription-NsIdentifierDeletionNotification'

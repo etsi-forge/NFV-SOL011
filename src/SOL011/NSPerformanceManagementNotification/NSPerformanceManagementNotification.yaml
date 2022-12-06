@@ -34,6 +34,6 @@ produces:
 
 paths:
   '/URI_is_provided_by_the_client_when_creating_the_subscription_PerformanceInformationAvailableNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagementNotification/NSPerformanceManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription_PerformanceInformationAvailableNotificatio'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagementNotification/NSPerformanceManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription_PerformanceInformationAvailableNotificatio'
   '/URI_is_provided_by_the_client_when_creating_the_subscription_ThresholdCrossedNotification':
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagementNotification/NSPerformanceManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription_ThresholdCrossedNotification'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagementNotification/NSPerformanceManagementNotification.yaml#/paths/~1URI_is_provided_by_the_client_when_creating_the_subscription_ThresholdCrossedNotification'

@@ -34,24 +34,24 @@ produces:
 
 paths:
   "/api_versions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1api-versions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1api-versions'
   "/ns_instances":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances'
   "/ns_instances/{nsInstanceId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}'
   "/ns_instances/{nsInstanceId}/instantiate":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1instantiate'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1instantiate'
   "/ns_instances/{nsInstanceId}/terminate":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1terminate'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1terminate'
   "/ns_instances/{nsInstanceId}/scale":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1scale'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1scale'
   "/ns_instances/{nsInstanceId}/heal":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1heal'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_instances~1{nsInstanceId}~1heal'
   "/ns_lcm_op_occs":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_lcm_op_occs'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_lcm_op_occs'
   "/ns_lcm_op_occs/{nsLcmOpOccId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_lcm_op_occs~1{nsLcmOpOccId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1ns_lcm_op_occs~1{nsLcmOpOccId}'
   "/subscriptions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1subscriptions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1subscriptions'
   "/subscriptions/{subscriptionId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1subscriptions~1{subscriptionId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSLifecycleManagement/NSLifecycleManagement.yaml#/paths/~1subscriptions~1{subscriptionId}'

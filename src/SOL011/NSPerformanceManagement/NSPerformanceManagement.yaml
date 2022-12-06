@@ -34,12 +34,12 @@ produces:
 
 paths:
   "/api_versions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1api-versions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1api-versions'
   "/pm_jobs":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1pm_jobs'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1pm_jobs'
   "/pm_jobs/{pmJobId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1pm_jobs~1{pmJobId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1pm_jobs~1{pmJobId}'
   "/thresholds":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1thresholds'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1thresholds'
   "/thresholds/{thresholdId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1thresholds~1{thresholdId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSPerformanceManagement/NSPerformanceManagement.yaml#/paths/~1thresholds~1{thresholdId}'
