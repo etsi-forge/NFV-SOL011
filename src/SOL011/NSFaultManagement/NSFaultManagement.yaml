@@ -34,12 +34,12 @@ produces:
 
 paths:
   "/api_versions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1api-versions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1api-versions'
   "/alarms":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1alarms'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1alarms'
   "/alarms/{alarmId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1alarms~1{alarmId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1alarms~1{alarmId}'
   "/subscriptions":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1subscriptions'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1subscriptions'
   "/subscriptions/{subscriptionId}":
-    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/v2.6.1/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1subscriptions~1{subscriptionId}'
+    $ref: 'https://forge.etsi.org/rep/nfv/SOL005/-/raw/2.6.1-maintenance/src/SOL005/NSFaultManagement/NSFaultManagement.yaml#/paths/~1subscriptions~1{subscriptionId}'
